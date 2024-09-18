@@ -1,0 +1,17 @@
+.report-section {
+    margin-bottom: 30px;
+}
+.task-entry {
+    margin-bottom: 20px;
+}
+.task-entry input, .task-entry textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.task-entry label {
+    font-weight: bold;
+}
+h2 {
+    color: #333;
+}

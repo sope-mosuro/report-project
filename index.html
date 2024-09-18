@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Report Submission</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+     crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Submit Your Weekly Report</h1>
+        <form id="weeklyReportForm" action="/send-email" method="POST">
+            <label for="employeeName">Employee Name:</label>
+            <input type="text" id="employeeName" name="employeeName" >
+
+            <label for="weekEnding">Week Ending:</label>
+            <input type="date" id="weekEnding" name="weekEnding" >
+
+            <!-- Report #1 -->
+            <div class="report-section">
+                <h2>Report 1: Support</h2>
+                <div id="tasksContainer1">
+                    <!-- Task Entry #1 for support-->
+                    <div class="task-entry">
+                        <h3>Task #1</h3>
+                        <label for="clientName1_1">Client Name:</label>
+                        <input type="text" id="clientName1_1" name="clientName1[]" optional>
+
+                        <label for="product1_1">Product:</label>
+                        <textarea id="product1_1" name="product1[]" rows="3"  ></textarea>
+
+                        <label for="currentTask1_1">Current Task:</label>
+                        <textarea id="currentTask1_1" name="currentTask1[]" rows="3" ></textarea>
+
+                        <label for="completedTask1_1">Completed Task:</label>
+                        <textarea id="completedTask1_1" name="completedTask1[]" rows="3" ></textarea>
+
+                        <label for="outstandingTask1_1">outstanding:</label>
+                        <textarea id="outstandingTask1_1" name="outstandingTask1[]" rows="3" ></textarea>
+                    </div>
+                </div>
+                <button type="button" class="addTaskButton" data-report="1">Add Another Task to Report #1</button>
+            </div>
+
+            <!-- Report #2 -->
+            <div class="report-section">
+                <h2>Report #2: Implementation</h2>
+                <div id="tasksContainer2">
+                    <!-- Task Entry #1 for Report #2 -->
+                    <div class="task-entry">
+                        <h3>Task #1</h3>
+                        <label for="clientName2_1">Client Name:</label>
+                        <input type="text" id="clientName2_1" name="clientName2[]" optional>
+
+                        <label for="product2_1">Product:</label>
+                        <textarea id="product2_1" name="product2[]" rows="3" ></textarea>
+
+                        <label for="currentTask2_1">Current Task:</label>
+                        <textarea id="currentTask2_1" name="currentTask2[]" rows="3" ></textarea>
+
+                        <label for="completedTask2_1">Completed Task:</label>
+                        <textarea id="completedTask2_1" name="completedTask2[]" rows="3" ></textarea>
+
+                        <label for="outstandingTask2_1">outstanding Task:</label>
+                        <textarea id="outstandingTask2_1" name="outstandingTask2[]" rows="3" ></textarea>
+                    </div>
+                </div>
+                <button type="button" class="addTaskButton" data-report="2">Add Another Task to Report #2</button>
+            </div>
+
+            <!-- Report #3 -->
+            <div class="report-section">
+                <h2>Report #3: Challenges and Solutions</h2>
+                <div id="tasksContainer3">
+                    <!-- Task Entry #1 for Report #3 -->
+                    <div class="task-entry">
+                        <h3>Task #1</h3>
+                        <label for="clientName3_1">Client Name:</label>
+                        <input type="text" id="clientName3_1" name="clientName3" >
+
+                        <label for="product3_1">Product:</label>
+                        <textarea id="product3_1" name="product3" rows="3" ></textarea>
+
+                        <label for="currentTask3_1">Current Task:</label>
+                        <textarea id="currentTask3_1" name="currentTask3" rows="3" ></textarea>
+
+                        <label for="completedTask3_1">Completed Task:</label>
+                        <textarea id="completedTask3_1" name="completedTask3" rows="3"></textarea>
+
+                        
+                        <label for="outstandingTask3_1">outstanding Task:</label>
+                        <textarea id="outstandingTaskTask3_1" name="outstandingTask3" rows="3"></textarea>
+                    </div>
+                    </div>
+                </div>
+                <button type="button" class="addTaskButton" data-report="3">Add Another Task to Report #3</button>
+
+            </div>
+            <div>
+                <label for="recipients">Enter recipient email addresses (separated by commas):</label>
+                <textarea id="recipients" name="recipients" rows="4" cols="50" placeholder="email1@example.com, email2@example.com"></textarea>
+            </div>
+        
+
+            <button type="submit">Send Report</button>
+        </form>
+    </div>
+
+   
+</body>
+<script src="script.js"></script>
+
+</html>
